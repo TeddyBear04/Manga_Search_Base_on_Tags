@@ -4,11 +4,10 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from scraper.url_scraper import get_story_urls
-from scraper.story_scraper import scrape_story
-from utils.cleaner import clean_story_data
-from analysis.analyzer import analyze_tags, analyze_authors, analyze_status
-from analysis.visualizer import plot_bar
+from scraper import get_story_urls, scrape_story
+from utils import clean_story_data
+from analysis import analyze_tags, analyze_authors, analyze_status, plot_bar
+
 
 def main():
     base_url = "https://truyenfull.vision/danh-sach/truyen-hot/"
@@ -56,3 +55,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
